@@ -1,38 +1,245 @@
-.App {
-  text-align: center;
-}
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  letter-spacing: 1.4px;
+  line-height: 1.4;
+  text-transform: capitalize;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  background-color: aliceblue;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+h1 a {
+  color: white;
+  font-size: 2.5rem;
+  text-decoration: none;
+}
+header {
+  padding: 1em;
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+header ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin-right: 10px;
+  align-items: center;
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 1.1rem;
+}
+.container {
+  max-width: 960px;
   display: flex;
   flex-direction: column;
+  padding: 10px;
+  margin: 0 auto;
+  align-items: center;
+}
+.container h2 {
+  text-align: center;
+  padding: 1em;
+  gap: 0.4rem;
+  font-size: 2rem;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+form {
+  display: grid;
+  gap: 1rem;
+  max-width: 360px;
+}
+.form-control {
+  padding: 0.3em;
+}
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+input {
+  padding: 7px;
+  width: 360px;
+  border: 1px solid black;
+  background-color: white;
+}
+button {
+  background-color: black;
+  padding: 0.3em 0.6em;
   color: white;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  font-weight: bold;
 }
-
-.App-link {
-  color: #61dafb;
+button:hover {
+  background-color: white;
+  color: black;
+  transition: 0.5s;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+input:is(:hover, :focus) {
+  border: 2px solid black;
+  outline: none;
+}
+nav ul li a:hover {
+  background-color: white;
+  color: black;
+  padding: 10px;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+nav ul li a.active {
+  background-color: white;
+  color: black;
+  padding: 10px;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+textarea {
+  width: 400px;
+  height: 300px;
+  resize: none;
+}
+.blog-form {
+  /* max-width: 400px; */
+  max-width: 960px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+.blog-form form {
+  width: 400px;
+}
+.blogs {
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  padding: 1em;
+  place-items: center;
+  margin: 0 auto;
+  gap: 0.5rem;
+}
+.blog {
+  max-width: 370px;
+  background-color: white;
+  height: 100%;
+  box-shadow: 0 0 3px black;
+  padding: 1em 0.8em;
+  display: grid;
+  position: relative;
+  gap: 1em;
+}
+.blog > div {
+  display: flex;
+  flex-direction: column;
+}
+.blog h2 {
+  font-size: 1.1rem;
+}
+.blog h3 {
+  font-size: 0.8rem;
+}
+.blog p {
+  font-size: 1.4ch;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+img {
+  aspect-ratio: 16/7;
+  width: 100%;
+  object-fit: cover;
+}
+blockquote {
+  margin-top: auto;
+  align-self: end;
+}
+.delete-btn {
+  position: absolute;
+  right: 0;
+  background-color: transparent;
+  color: black;
+  border: none;
+}
+.delete-btn:hover {
+  color: red;
+}
+.details {
+  padding: 1em;
+  display: grid;
+  place-items: center;
+  gap: 1em;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.details textarea {
+  height: 100px;
+  width: 300px;
+  padding: 10px;
+  border-radius: 5px;
+}
+blockquote {
+  font-weight: 300;
+  color: rgb(40, 32, 32);
+  margin-top: 10px;
+}
+.content {
+  display: grid;
+  gap: 0.5em;
+  background-color: white;
+  padding: 1em;
+  border-radius: 10px;
+}
+.comments {
+  display: grid;
+  justify-items: center;
+  gap: 0.5em;
+}
+.comments > div {
+  background-color: white;
+  border-radius: 10px;
+  padding: 1em;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1em;
+}
+.comments > div button {
+  font-size: 0.9rem;
+}
+.center {
+  text-align: center;
+}
+@media (max-width: 600px) {
+  h1 a {
+    font-size: 1.4rem;
   }
-  to {
-    transform: rotate(360deg);
+  nav ul {
+    align-items: center;
+    margin-top: 6px;
+  }
+  nav ul li a {
+    font-size: 1rem;
+  }
+  .details {
+    max-width: 100%;
+  }
+  .details p {
+    font-size: 0.9rem;
   }
 }
