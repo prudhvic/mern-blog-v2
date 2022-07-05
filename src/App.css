@@ -242,4 +242,7 @@ blockquote {
   .details p {
     font-size: 0.9rem;
   }
+.details textarea{
+width:200px
+}
 }
